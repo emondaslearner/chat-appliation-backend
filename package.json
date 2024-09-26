@@ -1,0 +1,46 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cloudinary": "^2.2.0",
+    "cors": "^2.8.5",
+    "cron": "^3.1.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fcm-node": "^1.6.1",
+    "firebase-admin": "^12.1.1",
+    "import-meta-resolve": "^4.1.0",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "module-alias": "^2.2.3",
+    "mongoose": "^8.4.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.13",
+    "redis": "^4.6.14",
+    "socket.io": "^4.7.5",
+    "supertest": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "_moduleAliases": {
+    "@src": "./src",
+    "@routers": "./src/routers",
+    "@utils": "./src/utils",
+    "@controller": "./src/controller",
+    "@middleware": "./src/middleware",
+    "@models": "./src/models",
+    "@lib": "./src/lib",
+    "@third-party": "./src/third-party",
+    "@db": "./src/db"
+  }
+}
