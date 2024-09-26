@@ -9,6 +9,7 @@ const middleware = (app) => {
       origin: ["http://localhost:3000", "https://chat-application-frontend-kr1s.onrender.com"],
       methods: ["GET", "POST", "PUT", "DELETE"],
       allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true, // Allow credentials
     })
   );
   app.use(router);
