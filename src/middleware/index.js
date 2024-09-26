@@ -4,7 +4,13 @@ const router = require("@routers");
 
 const middleware = (app) => {
   app.use(bodyParser.json());
-  app.use(cors());
+  app.use(
+    cors({
+      origin: ["http://localhost:3000", "https://chat-application-frontend-kr1s.onrender.com"],
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+    })
+  );
   app.use(router);
 
   // send error response
