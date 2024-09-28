@@ -4,9 +4,9 @@ const { authentication } = require("./middleware");
 const socketConnection = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: 'http://localhost:3000',
-      methods: ['GET', 'POST']
-  }
+      origin: "https://chat-appliation-backend.onrender.com",
+      methods: ["GET", "POST"],
+    },
   });
 
   io.use(authentication);

@@ -4,7 +4,10 @@ const router = require("@routers");
 
 const middleware = (app) => {
   app.use(bodyParser.json());
-  app.options('*', cors());
+  app.use(cors({
+    origin: 'https://chat-application-frontend-eight.vercel.app', // Replace with your frontend origin
+    credentials: true // If required, allow cookies
+  }));
   app.use(router);
 
   // send error response
